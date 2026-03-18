@@ -26,11 +26,16 @@ body::before {
 }
 
 /*Styling the logo image to appear smaller*/
-.logo img{
+.logo{
     max-width:70px;
     filter:brightness(0.8);
 }
 
+.logo-nav {
+    display: flex;           /* using flexbox to align logo and navigation links */
+    align-items: center;     
+    gap: 50px; 
+}
 /*Putting the navigation links side to side and removing the bullets*/
 nav ul{
     display: flex;
