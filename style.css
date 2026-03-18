@@ -7,7 +7,7 @@ html, body{
 /*Ensuring the photo covers the entire screen and is centered*/
 body{
     width: 100%;
-    background-image:url(Images/bingwa.jpg);
+    background-image:url(Images/fans.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -40,6 +40,7 @@ body::before {
 nav ul{
     display: flex;
     list-style: none;
+    align-items: center;
     gap: 25px;
     margin: 0;
     padding: 0;
@@ -47,7 +48,7 @@ nav ul{
 
 /*Styling the navigation links to be white and larger and to also remove the underline*/
 nav ul li a{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
