@@ -4,16 +4,16 @@ html, body{
    padding: 0;
 }
 
-/*The photo covers the entire screen and is centered*/
+/*Ensuring the photo covers the entire screen and is centered*/
 body{
     width: 100%;
-    background-image:url(bingwa.jpg);
+    background-image:url(Images/bingwa.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
-/*Adding a dark overlay to make the text more readable*/
+/*Adding a dark overlay to make the website text more readable*/
 body::before {
     content: "";
     position: fixed;
