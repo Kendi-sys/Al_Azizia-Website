@@ -24,3 +24,8 @@ body::before {
     background: rgba(0, 0, 0, 0.4);
     z-index: 0;
 }
+
+/*Styling the logo image to appear smaller*/
+.logo img{
+    max-width:70px;
+}
