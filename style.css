@@ -30,3 +30,20 @@ body::before {
     max-width:70px;
     filter:brightness(0.8);
 }
+
+/*Putting the navigation links side to side and removing the bullets*/
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/*Styling the navigation links to be white and larger and to also remove the underline*/
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
