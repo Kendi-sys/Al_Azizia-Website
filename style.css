@@ -2,15 +2,18 @@
 html, body{
    margin: 0;
    padding: 0;
+   height: 100%;
+   font-family: 'Arial', sans-serif;
 }
 
 /*Ensuring the photo covers the entire screen and is centered*/
 body{
-    width: 100%;
-    background-image:url(Images/fans.jpg);
+    background-image:url(Images/background.jpeg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 /*Adding a dark overlay to make the website text more readable*/
@@ -21,8 +24,14 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 0;
+}
+
+/* Content floats above overlay */
+header, main, footer {
+    position: relative;
+    z-index: 1;
 }
 
 /*Styling the logo image to appear smaller*/
@@ -36,20 +45,48 @@ body::before {
     align-items: center;     
     gap: 50px; 
 }
-/*Putting the navigation links side to side and removing the bullets*/
-nav ul{
+
+
+/* === Styling the logo and the navigation links === */
+/* Navigation container */
+nav {
     display: flex;
+    align-items: center;          /* vertically center logo & links */
+    justify-content: flex-start;   /* logo stays left */
+    padding: 20px 60px;
+    flex-wrap: nowrap;             /* no wrapping */
+}
+
+/* Logo stays on the left */
+nav .logo img {
+    max-height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* Nav links container centered */
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* center the links horizontally */
+}
+
+/* Nav links styling */
+.nav-links ul {
+    display: flex;
+    gap: 60px;              /* space between links */
     list-style: none;
-    align-items: center;
-    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
-/*Styling the navigation links to be white and larger and to also remove the underline*/
-nav ul li a{
-    color: white;
+.nav-links ul li {
+    white-space: nowrap;
+}
+
+.nav-links ul li a {
     text-decoration: none;
-    font-size: 18px;
+    color: white;
     font-weight: bold;
+    font-size: 1.1rem;
 }
