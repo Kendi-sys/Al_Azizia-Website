@@ -55,6 +55,11 @@
                     <h3>Latest Videos</h3>
                     <p>Watch our most recent training sessions and match highlights.</p>
                 </article>
+
+                <article>
+                    <h3>Achievements</h3>
+                    <p>Discover our notable accomplishments and milestones.</p>
+                </article>
             </div>
         </section>    
     </header>    
@@ -64,11 +69,39 @@
     <section id="about" aria-labelledby="about-heading">
        <h1 class="section-heading" id="about-heading">About the club</h1>
         <div class="about-content">
-            <p>
-                Founded in 1983 in the heart of Meru, Al Azizia Football Club has been a beacon of football excellence for over four decades. With a rich history of nurturing talent and fostering a strong sense of community, we have become a beloved institution in the world of football. Our commitment to developing players both on and off the field has earned us a reputation for excellence and sportsmanship. Join us as we continue to build on our legacy and strive for greatness in every match we play.
-            </p>
+            <p>Founded in 1983 in the heart of Meru, Al Azizia Football Club has been a beacon of football excellence for over four decades. With a rich history of nurturing talent and fostering a strong sense of community, we have become a beloved institution in the world of football. Our commitment to developing players both on and off the field has earned us a reputation for excellence and sportsmanship. Join us as we continue to build on our legacy and strive for greatness in every match we play.</p>
         </div>
     </section>    
+    
+    <!--Form to fill out jersey orders. This will allow users to order custom jerseys from the club-->
+    <section id="jersey" aria-labelledby="jersey-heading">
+        <h1 class="section-heading" id="jersey-heading">Order Your Jersey</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="size">Jersey Size:</label>
+                <select id="size" name="size" required>
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
 
 </body>
 </html>
