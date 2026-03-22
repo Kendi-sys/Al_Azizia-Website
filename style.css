@@ -51,10 +51,10 @@ header, main, footer {
 /* Navigation container */
 nav {
     display: flex;
-    align-items: center;          /* vertically center logo & links */
-    justify-content: flex-start;   /* logo stays left */
+    align-items: center;          
+    justify-content: flex-start;   
     padding: 20px 60px;
-    flex-wrap: nowrap;             /* no wrapping */
+    flex-wrap: nowrap;             
 }
 
 /* Logo stays on the left */
@@ -89,4 +89,41 @@ nav .logo img {
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+
+/*Styling the jersey ordering form*/
+#ordering-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#ordering-form input, #ordering-form select, #ordering-form button {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+#ordering-form button {
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+}
+
+
+/*Styling the footer*/
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.6); 
+}
+
+.footer-links a {
+    color: white;              
+    text-decoration: none;     
+    font-weight: bold;         
+    margin: 0 10px;           
 }

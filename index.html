@@ -11,7 +11,7 @@
 
 
 <body>
-    
+
     <!--Introducing the navigation links for the landing page-->
     <header class ="hero-header" id="hero-header">
 
@@ -27,7 +27,7 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#Jersey">Order Jersey</a></li>
+                <li><a href="#jersey">Order Jersey</a></li>
             </ul>
      </div> 
     </nav>
@@ -74,42 +74,46 @@
     </section>    
     
     <!--Form to fill out jersey orders. This will allow users to order custom jerseys from the club-->
-    <section id="jersey" aria-labelledby="jersey-heading">
-        <h1 class="section-heading" id="jersey-heading">Order Your Jersey</h1>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for ="type">Jersey Type:</label>
-                <select id="type" name="type" required></select>
-                    <option value="">Select Type</option>
-                    <option value="home">Home</option>
-                    <option value="away">Away</option>
-                    <option value="third">Third</option>
+    
+        <section id="jersey" aria-labelledby="jersey-heading">
+            <h1 class="section-heading" id="jersey-heading">Order jersey from us</h1>
+            <form id="ordering-form" action="#" method="POST">
+            <!-- Name and email address are mandatory fields -->
+            <!-- The 'required' attribute ensures that the user must fill out this field before submitting the form -->
+            <!-- The 'placeholder' attribute provides a hint to the user about what to enter -->
+
+                <label for="name">Full Name</label> 
+                <input type="text" id="name" name="name" placeholder="Bee Beyonce" required> 
+           
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="beyonce@gmail.com" required>
+            
+            
+            <!-- The option value enables users to select their preferred jersey -->    
+             <!-- <label for="service-interest">Interested In:</label>-->
+
+                <select id="service-interest" name="service">
+                    <option value="select">Select your preferred jersey</option>
+                    <option value="small">Home</option>
+                    <option value="medium">Away</option>
+                    <option value="large">Third</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="size">Jersey Size:</label>
-                <select id="size" name="size" required>
-                    <option value="">Select Size</option>
-                    <option value="S">Small</option>
-                    <option value="M">Medium</option>
-                    <option value="L">Large</option>
-                    <option value="XL">Extra Large</option>
+
+
+                <select id="service-interest" name="service">
+                    <option value="select">Select the jersey size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="x-large">X-Large</option>
+                    <option value="xx-large">XX-Large</option>
+                    <option value="xxx-large">XXX-Large</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-            </div>
-            <button type="submit">Place Order</button>
-        </form>
+
+                <button type="submit">Submit order</button>
+            </form>
+        </section>
+    </main> <br>
     </section>
     </main>
     <footer>
