@@ -3,7 +3,7 @@ html, body{
    margin: 0;
    padding: 0;
    height: 100%;
-   font-family: 'Arial', sans-serif;
+   font-family: 'Arial', sans-serif; 
 }
 
 /*Ensuring the photo covers the entire screen and is centered*/
@@ -34,21 +34,9 @@ header, main, footer {
     z-index: 1;
 }
 
-/*Styling the logo image to appear smaller*/
-.logo{
-    max-width:70px;
-    filter:brightness(0.8);
-}
 
-.logo-nav {
-    display: flex;           /* using flexbox to align logo and navigation links */
-    align-items: center;     
-    gap: 50px; 
-}
+/* Styling the logo and the navigation links */
 
-
-/* === Styling the logo and the navigation links === */
-/* Navigation container */
 nav {
     display: flex;
     align-items: center;          
@@ -62,13 +50,14 @@ nav .logo img {
     max-height: 90px;
     width: auto;
     display: block;
+    justify-content: left;
 }
 
 /* Nav links container centered */
 .nav-links {
     flex: 1;
     display: flex;
-    justify-content: center;  /* center the links horizontally */
+    justify-content: center;  
 }
 
 /* Nav links styling */
@@ -91,6 +80,54 @@ nav .logo img {
     font-size: 1.1rem;
 }
 
+/* Styling the hero Section */
+.hero-content {
+    text-align: center;
+    padding: 150px 20px 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/*styling the magazine section*/
+.magazine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+.magazine-grid article {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/*Styling the h1 titles to center them*/
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Top spacing for sections */
+#jersey-heading,
+#about-heading,
+#magazine-heading {
+    margin-top: 200px;  
+}
 
 /*Styling the jersey ordering form*/
 #ordering-form {
@@ -113,6 +150,17 @@ nav .logo img {
     cursor: pointer;
 }
 
+/*Styling the about club section*/
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
 
 /*Styling the footer*/
 footer {
@@ -126,4 +174,37 @@ footer {
     text-decoration: none;     
     font-weight: bold;         
     margin: 0 10px;           
+}
+
+/*Adding responsive design for smaller screens*/
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    nav .logo img {
+        max-height: 70px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .about-content {
+        font-size: 1rem;
+    }
 }
